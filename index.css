@@ -1,0 +1,10 @@
+.stationery {
+  background-color: white;
+  color: black;
+  width: 120px;
+  height: 240px;
+  padding: 15px;
+  margin: 20px;
+  box-shadow: 10px 10px 20px #000000;
+  float: left;
+}
