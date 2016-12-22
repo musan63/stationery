@@ -22,7 +22,6 @@ $(document).ready(function() {
         // 物の名前
         var name = this.dataset.name;
 
-
         var id = "#" + name + "_a";
 
         // ローカルストレージの数値
@@ -39,9 +38,29 @@ $(document).ready(function() {
 
         stationery[name] = localStorage.getItem(name) | 0;
 
+        console.log("stationery[name] : " + stationery[name]);
+
         var num = this.value | 0;
 
-        stationery[name] += num;
+        console.log("num : " + num);
+
+        if (num === 0){
+          if (window.confirm("値が消去されます。\nよろしいですか？")) {
+            stationery[name] = 0;
+          }
+          else{
+            window.alert("中断しました。");
+          }
+        }
+        else
+          stationery[name] += num;
+
+        console.log("new s[n] : " + stationery[name]);
+
+        if(stationery[name] <= 0)
+          stationery[name] = 0;
+
+        console.log("=0 : " + stationery[name]);
 
         $("#" + name + "_a").text(stationery[name]);
 
