@@ -1,3 +1,10 @@
+function add() {
+    var div_element = document.createElement("div");
+    div_element.innerHTML = '<div class="stationery"><img src="./material/noimage.png" height="100px" width="100px"><h2>未タイトル</h2><p id="name_a">no data</p><input type="button" data-name="name" class="change_button" value="+1"><input type="button" data-name="name" class="change_button" value="-1"><input type="button" data-name="name" class="change_button" value="C"></div>';
+    var parent_object = document.getElementById("add_stationary");
+    parent_object.appendChild(div_element);
+}
+
 var stationery = {
     "pencil": 0,
     "eraser": 0,
@@ -44,21 +51,19 @@ $(document).ready(function() {
 
         console.log("num : " + num);
 
-        if (num === 0){
-          if (window.confirm("値が消去されます。\nよろしいですか？")) {
-            stationery[name] = 0;
-          }
-          else{
-            window.alert("中断しました。");
-          }
-        }
-        else
-          stationery[name] += num;
+        if (num === 0) {
+            if (window.confirm("値が消去されます。\nよろしいですか？")) {
+                stationery[name] = 0;
+            } else {
+                window.alert("中断しました。");
+            }
+        } else
+            stationery[name] += num;
 
         console.log("new s[n] : " + stationery[name]);
 
-        if(stationery[name] <= 0)
-          stationery[name] = 0;
+        if (stationery[name] <= 0)
+            stationery[name] = 0;
 
         console.log("=0 : " + stationery[name]);
 
