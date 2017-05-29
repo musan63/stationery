@@ -7,16 +7,9 @@
     <!--  幅をブラウザの幅に合わせる -->
     <meta name="viewprot" content="width=device-width,initial-scale=1.0">
 
-    <!--
-      重複コンテンツの防止
-      主に検索エンジン。
-      www.abc.com = www.abc.com/index.html
-    <link rel="canonical" href="">
-    -->
-
-    <!-- リンクのアイコン -->
     <link rel="icon" href="./material/stationary.ico">
-
+    <script type="text/javascript" src="./js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="./js/main.js"></script>
     <link rel="stylesheet" type="text/css" href="./index.css">
     <title>Stationery</title>
 </head>
@@ -28,6 +21,12 @@
     <div>
         <button onclick="add();">文具を追加</button>
     </div>
+
+    <!--動作しない
+    <div>
+        <button onclick="clear();">全ての値を削除</button>
+    </div>
+    -->
 
     <div id="add_stationary">
     </div>
@@ -77,8 +76,6 @@
         <input type="button" data-name="redpen" class="change_button" value="C">
     </div>
 
-    <script type="text/javascript" src="./js/jquery-3.1.1.min.js"></script>
-    <script type="text/javascript" src="./js/main.js"></script>
 </body>
 
 </html>

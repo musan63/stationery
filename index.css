@@ -1,3 +1,7 @@
+body    {
+    background-color: #C7DFF6;
+}
+
 header {
   background-image: url(./material/header.png);
   background-size: 100% 100%;
@@ -10,7 +14,7 @@ header {
 h1{
   margin-top: auto;
   text-align: center;
-  color: blue;
+  color: #555555;
   font-size: 60px;
   font-family: Impact;
 }

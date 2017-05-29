@@ -5,6 +5,17 @@ function add() {
     parent_object.appendChild(div_element);
 }
 
+/*何故か動作しない
+function clear() {
+  console.log("clear");
+  if (window.confirm("値が消去されます。\nよろしいですか？")) {
+      localStorage.clear();
+      console.log(localStorage);
+  } else {
+      window.alert("中断しました。");
+  }
+}*/
+
 var stationery = {
     "pencil": 0,
     "eraser": 0,
@@ -54,6 +65,7 @@ $(document).ready(function() {
         if (num === 0) {
             if (window.confirm("値が消去されます。\nよろしいですか？")) {
                 stationery[name] = 0;
+                // localStorage.removeItem('\''+name+'\'');
             } else {
                 window.alert("中断しました。");
             }
